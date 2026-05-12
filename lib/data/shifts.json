@@ -1,0 +1,21 @@
+[
+  { "id": "s001", "therapistId": "ren",   "date": "2026-05-13", "startTime": "15:00", "endTime": "24:00" },
+  { "id": "s002", "therapistId": "ren",   "date": "2026-05-14", "startTime": "13:00", "endTime": "22:00" },
+  { "id": "s003", "therapistId": "ren",   "date": "2026-05-17", "startTime": "17:00", "endTime": "26:00" },
+  { "id": "s004", "therapistId": "sora",  "date": "2026-05-12", "startTime": "17:00", "endTime": "26:00" },
+  { "id": "s005", "therapistId": "sora",  "date": "2026-05-13", "startTime": "17:00", "endTime": "26:00" },
+  { "id": "s006", "therapistId": "sora",  "date": "2026-05-15", "startTime": "17:00", "endTime": "26:00" },
+  { "id": "s007", "therapistId": "sora",  "date": "2026-05-16", "startTime": "15:00", "endTime": "25:00" },
+  { "id": "s008", "therapistId": "yuki",  "date": "2026-05-14", "startTime": "14:00", "endTime": "23:00" },
+  { "id": "s009", "therapistId": "yuki",  "date": "2026-05-15", "startTime": "14:00", "endTime": "23:00" },
+  { "id": "s010", "therapistId": "yuki",  "date": "2026-05-17", "startTime": "12:00", "endTime": "22:00" },
+  { "id": "s011", "therapistId": "aoi",   "date": "2026-05-16", "startTime": "18:00", "endTime": "26:00" },
+  { "id": "s012", "therapistId": "aoi",   "date": "2026-05-17", "startTime": "15:00", "endTime": "25:00" },
+  { "id": "s013", "therapistId": "haru",  "date": "2026-05-12", "startTime": "14:00", "endTime": "22:00" },
+  { "id": "s014", "therapistId": "haru",  "date": "2026-05-14", "startTime": "14:00", "endTime": "22:00" },
+  { "id": "s015", "therapistId": "haru",  "date": "2026-05-16", "startTime": "14:00", "endTime": "22:00" },
+  { "id": "s016", "therapistId": "shion", "date": "2026-05-12", "startTime": "17:00", "endTime": "26:00" },
+  { "id": "s017", "therapistId": "shion", "date": "2026-05-13", "startTime": "17:00", "endTime": "26:00" },
+  { "id": "s018", "therapistId": "shion", "date": "2026-05-15", "startTime": "17:00", "endTime": "26:00" },
+  { "id": "s019", "therapistId": "shion", "date": "2026-05-16", "startTime": "17:00", "endTime": "26:00" }
+]

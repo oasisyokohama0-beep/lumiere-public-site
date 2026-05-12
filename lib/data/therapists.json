@@ -1,0 +1,74 @@
+[
+  {
+    "id": "ren",
+    "name": "蓮",
+    "romanName": "REN",
+    "age": 27,
+    "height": 178,
+    "tags": ["癒し系", "聞き上手", "初心者◎"],
+    "introduction": "やわらかな声と落ち着いた所作で、初めての方からの指名が多いセラピストです。",
+    "mainPhotoUrl": "/images/cast-ren.jpg",
+    "photoPosition": "50% 28%",
+    "isNew": false
+  },
+  {
+    "id": "sora",
+    "name": "蒼",
+    "romanName": "SORA",
+    "age": 25,
+    "height": 182,
+    "tags": ["ミステリアス", "寡黙", "夜型"],
+    "introduction": "静かな時間が好きです。多くを語らずとも、心地よく過ごせる夜を。",
+    "mainPhotoUrl": "/images/cast-sora.png",
+    "photoPosition": "50% 30%",
+    "isNew": false
+  },
+  {
+    "id": "yuki",
+    "name": "雪",
+    "romanName": "YUKI",
+    "age": 29,
+    "height": 175,
+    "tags": ["物腰やわらか", "上品", "指名多数"],
+    "introduction": "日常から少し離れて、ご自身を労わる時間を、静かに、丁寧にお作りします。",
+    "mainPhotoUrl": null,
+    "photoPosition": null,
+    "isNew": false
+  },
+  {
+    "id": "aoi",
+    "name": "碧",
+    "romanName": "AOI",
+    "age": 26,
+    "height": 180,
+    "tags": ["ナチュラル", "色気", "雑談◎"],
+    "introduction": "お話する時間も、施術の時間も、同じくらい大切にしています。",
+    "mainPhotoUrl": null,
+    "photoPosition": null,
+    "isNew": false
+  },
+  {
+    "id": "haru",
+    "name": "春",
+    "romanName": "HARU",
+    "age": 24,
+    "height": 172,
+    "tags": ["新人", "甘え上手", "やさしい"],
+    "introduction": "4月にデビューしました。初めての方と、ゆっくりお話できたら嬉しいです。",
+    "mainPhotoUrl": "/images/cast-haru.png",
+    "photoPosition": "50% 25%",
+    "isNew": true
+  },
+  {
+    "id": "shion",
+    "name": "紫苑",
+    "romanName": "SHION",
+    "age": 31,
+    "height": 184,
+    "tags": ["大人の余裕", "指名◎", "上級者"],
+    "introduction": "長くこの仕事に向き合ってきました。ご自身のペースで、ゆっくりと。",
+    "mainPhotoUrl": null,
+    "photoPosition": null,
+    "isNew": false
+  }
+]

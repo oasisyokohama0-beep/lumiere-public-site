@@ -1,0 +1,46 @@
+[
+  {
+    "id": "rev-001",
+    "therapistId": "ren",
+    "therapistName": "蓮",
+    "authorName": "20代 / 初めての利用",
+    "rating": 5,
+    "content": "はじめてで緊張していましたが、ゆっくりお話を聞いてくださって、安心して身を委ねられました。次の予約も決めてしまいました。",
+    "postedAt": "2026-05-08T10:00:00Z"
+  },
+  {
+    "id": "rev-002",
+    "therapistId": "yuki",
+    "therapistName": "雪",
+    "authorName": "20代 / 2回目",
+    "rating": 5,
+    "content": "所作のひとつひとつが丁寧で、日常の疲れがほどけていく感覚でした。",
+    "postedAt": "2026-05-05T14:00:00Z"
+  },
+  {
+    "id": "rev-003",
+    "therapistId": "sora",
+    "therapistName": "蒼",
+    "authorName": "30代 / リピーター",
+    "rating": 4,
+    "content": "会話のテンポが心地よく、気づけば時間があっという間でした。",
+    "postedAt": "2026-05-01T18:00:00Z"
+  },
+  {
+    "id": "rev-004",
+    "therapistId": "haru",
+    "therapistName": "春",
+    "authorName": "20代 / 初めての利用",
+    "rating": 5,
+    "content": "新人さんとは思えないほど落ち着いていて、こちらも自然と緊張がほぐれました。また行きたいです。",
+    "postedAt": "2026-05-10T12:00:00Z"
+  },
+  {
+    "id": "rev-005",
+    "therapistName": null,
+    "authorName": "20代 / 初めて",
+    "rating": 5,
+    "content": "予約の段階からとても丁寧に対応していただき、不安なく当日を迎えられました。お店の雰囲気も落ち着いていて素敵でした。",
+    "postedAt": "2026-04-28T16:00:00Z"
+  }
+]

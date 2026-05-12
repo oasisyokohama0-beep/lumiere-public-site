@@ -1,0 +1,31 @@
+[
+  {
+    "id": "course-60",
+    "name": "はじめてコース",
+    "durationMin": 60,
+    "price": 16000,
+    "description": "初めての方に最適な入門コース",
+    "isFirstOnly": true
+  },
+  {
+    "id": "course-90",
+    "name": "スタンダード",
+    "durationMin": 90,
+    "price": 22000,
+    "description": "いちばん選ばれています"
+  },
+  {
+    "id": "course-120",
+    "name": "リラックス",
+    "durationMin": 120,
+    "price": 28000,
+    "description": "ゆったりお話の時間も"
+  },
+  {
+    "id": "course-150",
+    "name": "プレミアム",
+    "durationMin": 150,
+    "price": 34000,
+    "description": "心ゆくまで、丁寧に"
+  }
+]

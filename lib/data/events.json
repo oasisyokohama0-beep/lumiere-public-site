@@ -1,0 +1,24 @@
+[
+  {
+    "id": "evt-001",
+    "tag": "MAY CAMPAIGN",
+    "title": "初回ご来店の方へ ¥3,000 OFF",
+    "subtitle": "2026.05.01 — 05.31",
+    "startDate": "2026-05-01",
+    "endDate": "2026-05-31"
+  },
+  {
+    "id": "evt-002",
+    "tag": "NEW ARRIVAL",
+    "title": "新人セラピスト『春』、デビュー",
+    "subtitle": "2026.05.09 〜",
+    "startDate": "2026-05-09"
+  },
+  {
+    "id": "evt-003",
+    "tag": "INFORMATION",
+    "title": "6月の出勤スケジュール更新",
+    "subtitle": "2026.06.01 〜",
+    "startDate": "2026-06-01"
+  }
+]

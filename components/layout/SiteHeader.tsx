@@ -1,0 +1,95 @@
+'use client'
+
+import Link from 'next/link'
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet'
+
+const MENU_ITEMS = [
+  { label: 'TOP',          href: '/' },
+  { label: '初めての方へ', href: '/system' },
+  { label: '料金システム', href: '/system' },
+  { label: '本日の出勤',   href: '/shifts' },
+  { label: 'ランキング',   href: '/ranking' },
+  { label: '予約フォーム', href: '#reserve' },
+  { label: '写メ日記',     href: '/diary' },
+  { label: 'セラピスト募集', href: '#recruit' },
+  { label: 'よくある質問', href: '/terms' },
+  { label: 'お問い合わせ', href: '#contact' },
+]
+
+export function SiteHeader() {
+  return (
+    <header className="sticky top-0 z-50 bg-bg/94 backdrop-blur-md border-b border-rule-gold">
+      <div className="max-w-[430px] mx-auto flex items-center justify-between px-[22px] py-3">
+
+        <Sheet>
+          <SheetTrigger
+            aria-label="メニューを開く"
+            className="flex flex-col justify-between w-[22px] h-4 cursor-pointer bg-transparent border-none p-0"
+          >
+            <span className="block h-px bg-ink w-full" />
+            <span className="block h-px bg-ink w-full" />
+            <span className="block h-px bg-ink w-[70%]" />
+          </SheetTrigger>
+
+          <SheetContent
+            side="left"
+            showCloseButton={false}
+            className="w-full max-w-[430px] p-0 bg-bg border-none flex flex-col gap-0"
+          >
+            {/* Header */}
+            <div className="flex items-center justify-between px-[22px] py-3 border-b border-rule-gold flex-shrink-0">
+              <div className="w-[22px]" />
+              <div className="text-center">
+                <div className="font-serif text-sm tracking-[4px] text-ink uppercase">Menu</div>
+                <div className="font-serif text-[8px] tracking-[2.5px] text-gold italic mt-px">navigation</div>
+              </div>
+              <SheetClose className="w-[22px] h-4 relative bg-transparent border-none p-0 cursor-pointer">
+                <span className="absolute top-[7px] left-0 block w-[22px] h-px bg-ink rotate-45" />
+                <span className="absolute top-[7px] left-0 block w-[22px] h-px bg-ink -rotate-45" />
+              </SheetClose>
+            </div>
+
+            {/* Nav items */}
+            <nav className="flex-1 overflow-y-auto py-6 text-center">
+              {MENU_ITEMS.map((item, i) => (
+                <SheetClose key={item.label} render={<Link href={item.href} />}>
+                  <div className="py-[14px] px-6">
+                    <div className="font-jp text-base text-ink tracking-[3px]">{item.label}</div>
+                    <div className="font-serif text-[8px] tracking-[2.5px] text-gold italic mt-0.5">
+                      {String(i + 1).padStart(2, '0')}
+                    </div>
+                  </div>
+                </SheetClose>
+              ))}
+            </nav>
+
+            {/* Footer */}
+            <div className="flex-shrink-0 px-[22px] pb-6 pt-[18px] border-t border-rule-gold bg-cream text-center">
+              <div className="font-serif text-[10px] tracking-[3px] text-gold italic">RESERVATIONS</div>
+              <div className="flex gap-2 justify-center mt-2.5">
+                <button className="flex-1 max-w-[130px] py-[11px] bg-line-green text-white font-serif tracking-[2px] text-[11px]">
+                  LINE
+                </button>
+                <button className="flex-1 max-w-[130px] py-[11px] bg-ink text-white font-serif tracking-[2px] text-[11px]">
+                  TEL
+                </button>
+              </div>
+            </div>
+          </SheetContent>
+        </Sheet>
+
+        {/* Brand */}
+        <Link href="/" className="text-center no-underline">
+          <div className="font-serif text-base tracking-[4px] text-ink uppercase">Lumière</div>
+          <div className="font-serif text-[8px] tracking-[2.5px] text-gold italic mt-px">est. 2024 ・ tokyo</div>
+        </Link>
+
+        {/* Search icon */}
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <circle cx="7" cy="7" r="5" stroke="#2A2622" strokeWidth="1.2" />
+          <path d="M11 11l4 4" stroke="#2A2622" strokeWidth="1.2" strokeLinecap="round" />
+        </svg>
+      </div>
+    </header>
+  )
+}

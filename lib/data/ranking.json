@@ -1,0 +1,26 @@
+[
+  {
+    "rank": 1,
+    "therapistId": "ren",
+    "therapistName": "蓮",
+    "romanName": "REN",
+    "label": "総合指名数 No.1",
+    "value": "342 件"
+  },
+  {
+    "rank": 2,
+    "therapistId": "yuki",
+    "therapistName": "雪",
+    "romanName": "YUKI",
+    "label": "リピート率 No.1",
+    "value": "78 %"
+  },
+  {
+    "rank": 3,
+    "therapistId": "sora",
+    "therapistName": "蒼",
+    "romanName": "SORA",
+    "label": "新規指名 No.1",
+    "value": "94 件"
+  }
+]
