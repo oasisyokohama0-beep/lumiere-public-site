@@ -59,5 +59,14 @@
 - `lib/data/store.json` を全プレースホルダー値（`[STORE_NAME]` 等）に差し替え
 - `docs/LEGAL_CHECKLIST.md` 作成
 
+## 2026-05-13｜仕様書 v2.1 への対応
+
+### 変更点
+- `Shift` 型に `BookedSlot` 型と `bookedSlots: BookedSlot[]` フィールドを追加
+- `shifts.json` に `bookedSlots` フィールドを追加（0〜2件のダミーデータ入り）
+- `/shifts` ページにタイムラインバー（予約済み時間帯を灰色で塗り潰し）を追加
+- `/diary` は低優先度のため現状維持（骨組み＋ダミーデータのまま）
+- `/reviews` は既実装済みのため変更なし
+
 ## イグチへの確認
-- 確認内容：なし（仕様書 v2 通りに対応）
+- 確認内容：なし（仕様書 v2.1 通りに対応）
