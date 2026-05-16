@@ -1,11 +1,17 @@
 import type { Metadata } from 'next'
 import { PageWrapper } from '@/components/layout/PageWrapper'
 import { BDivider } from '@/components/common/BDivider'
+import storeData from '@/lib/data/store.json'
+import type { StoreInfo } from '@/lib/types'
 
 export const metadata: Metadata = {
   title: 'アクセス',
   description: 'アクセス情報。完全予約制。',
 }
+
+// TODO(handover): Supabase クエリに置換
+// 元データ: lib/data/store.json / テーブル: store_info
+const store = storeData as StoreInfo
 
 export default function AccessPage() {
   return (
@@ -23,33 +29,49 @@ export default function AccessPage() {
         {/* エリア情報 */}
         <div className="px-[22px] flex flex-col gap-4 pb-8">
           {/* LEGAL(handover): エリア・アクセス情報
-              担当：イグチ（実際の営業エリアを差し込み。公開 OK な範囲で記載すること） */}
-          <div className="font-jp text-[12.5px] leading-[2] text-ink-sub bg-cream border border-rule-gold p-5 text-center">
-            <div className="font-serif text-[10px] tracking-[2px] text-gold italic mb-2">LEGAL(handover)</div>
-            ここに営業エリア・アクセス情報を差し込みます
+              担当：イグチ（実際の営業エリアを差し込み） */}
+          <div className="bg-surface border border-rule-gold p-5">
+            <div className="font-serif text-[10px] tracking-[3px] text-gold italic mb-1.5">Area</div>
+            <div className="font-jp text-[16px]">{store.area}</div>
+            <div className="w-full h-px bg-rule-gold my-3" />
+            {/* LEGAL(handover): エリア詳細・最寄り駅
+                担当：イグチ（公開OKな範囲で記載すること） */}
+            <div className="font-jp text-[12px] text-ink-sub leading-relaxed">
+              [STORE_ACCESS_DETAIL]
+            </div>
           </div>
         </div>
 
-        {/* 店舗情報テーブル */}
+        {/* 店舗情報テーブル（store.json から読み込み） */}
         <div className="px-[22px] pb-8">
           <div className="text-center mb-5">
             <span className="font-serif text-[11px] tracking-[4px] uppercase text-gold italic">Information</span>
           </div>
-
-          {/* LEGAL(handover): 店舗基本情報（営業時間・電話・LINE等）
-              担当：イグチ（store.json のプレースホルダーを実際の値に差し替え） */}
           <div className="bg-surface border border-rule-gold divide-y divide-rule">
-            {[
-              ['営業時間', '[STORE_BUSINESS_HOURS]'],
-              ['電話',     '[STORE_PHONE]'],
-              ['LINE',     '[STORE_LINE_URL]'],
-              ['定休日',   '[STORE_CLOSED_DAYS]'],
-            ].map(([k, v]) => (
-              <div key={k} className="flex py-4 px-4 gap-4">
-                <div className="w-16 flex-shrink-0 font-serif text-[10px] tracking-[1.5px] italic text-gold">{k}</div>
-                <div className="font-jp text-[12.5px] text-ink-sub leading-relaxed">{v}</div>
-              </div>
-            ))}
+            <div className="flex py-4 px-4 gap-4">
+              <div className="w-16 flex-shrink-0 font-serif text-[10px] tracking-[1.5px] italic text-gold">営業時間</div>
+              {/* LEGAL(handover): 営業時間 — store.json businessHours から自動取得 */}
+              <div className="font-jp text-[12.5px] text-ink leading-relaxed">{store.businessHours}</div>
+            </div>
+            <div className="flex py-4 px-4 gap-4">
+              <div className="w-16 flex-shrink-0 font-serif text-[10px] tracking-[1.5px] italic text-gold">定休日</div>
+              {/* LEGAL(handover): 定休日 — store.json closedDays から自動取得 */}
+              <div className="font-jp text-[12.5px] text-ink leading-relaxed">{(store as StoreInfo & { closedDays?: string }).closedDays}</div>
+            </div>
+            <div className="flex py-4 px-4 gap-4">
+              <div className="w-16 flex-shrink-0 font-serif text-[10px] tracking-[1.5px] italic text-gold">電話</div>
+              {/* LEGAL(handover): 電話番号 — store.json phone から自動取得 */}
+              <a href={`tel:${store.phone}`} className="font-jp text-[12.5px] text-ink leading-relaxed no-underline">
+                {store.phone}
+              </a>
+            </div>
+            <div className="flex py-4 px-4 gap-4">
+              <div className="w-16 flex-shrink-0 font-serif text-[10px] tracking-[1.5px] italic text-gold">LINE</div>
+              {/* LEGAL(handover): LINE URL — store.json lineUrl から自動取得 */}
+              <a href={store.lineUrl} className="font-jp text-[12.5px] text-ink leading-relaxed no-underline">
+                {store.lineUrl}
+              </a>
+            </div>
           </div>
         </div>
 
@@ -60,8 +82,14 @@ export default function AccessPage() {
             <div className="font-jp text-sm mt-3 leading-relaxed">ご予約・お問い合わせはこちら</div>
             <div className="w-7 h-px bg-gold mx-auto my-4" />
             <div className="flex gap-2.5 justify-center">
-              <button className="flex-1 max-w-[130px] py-3 border border-gold text-gold font-serif tracking-[2px] text-[11px]">LINE</button>
-              <button className="flex-1 max-w-[130px] py-3 border border-gold text-gold font-serif tracking-[2px] text-[11px]">TEL</button>
+              {/* LEGAL(handover): LINE URL — store.json lineUrl から取得 */}
+              <a href={store.lineUrl ?? '#'} className="flex-1 max-w-[130px] py-3 border border-gold text-gold font-serif tracking-[2px] text-[11px] text-center no-underline">
+                LINE
+              </a>
+              {/* LEGAL(handover): 電話番号 — store.json phone から取得 */}
+              <a href={`tel:${store.phone}`} className="flex-1 max-w-[130px] py-3 border border-gold text-gold font-serif tracking-[2px] text-[11px] text-center no-underline">
+                TEL
+              </a>
             </div>
           </div>
         </div>

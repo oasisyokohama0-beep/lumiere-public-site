@@ -1,0 +1,20 @@
+[
+  { "id": "ph-ren-1",   "therapistId": "ren",   "url": "/images/cast-ren.jpg",         "isMain": true,  "sortOrder": 1 },
+  { "id": "ph-ren-2",   "therapistId": "ren",   "url": "/images/placeholder.jpg",      "isMain": false, "sortOrder": 2 },
+  { "id": "ph-ren-3",   "therapistId": "ren",   "url": "/images/placeholder.jpg",      "isMain": false, "sortOrder": 3 },
+  { "id": "ph-sora-1",  "therapistId": "sora",  "url": "/images/cast-sora.png",        "isMain": true,  "sortOrder": 1 },
+  { "id": "ph-sora-2",  "therapistId": "sora",  "url": "/images/placeholder.jpg",      "isMain": false, "sortOrder": 2 },
+  { "id": "ph-sora-3",  "therapistId": "sora",  "url": "/images/placeholder.jpg",      "isMain": false, "sortOrder": 3 },
+  { "id": "ph-yuki-1",  "therapistId": "yuki",  "url": "/images/placeholder.jpg",      "isMain": true,  "sortOrder": 1 },
+  { "id": "ph-yuki-2",  "therapistId": "yuki",  "url": "/images/placeholder.jpg",      "isMain": false, "sortOrder": 2 },
+  { "id": "ph-yuki-3",  "therapistId": "yuki",  "url": "/images/placeholder.jpg",      "isMain": false, "sortOrder": 3 },
+  { "id": "ph-aoi-1",   "therapistId": "aoi",   "url": "/images/placeholder.jpg",      "isMain": true,  "sortOrder": 1 },
+  { "id": "ph-aoi-2",   "therapistId": "aoi",   "url": "/images/placeholder.jpg",      "isMain": false, "sortOrder": 2 },
+  { "id": "ph-aoi-3",   "therapistId": "aoi",   "url": "/images/placeholder.jpg",      "isMain": false, "sortOrder": 3 },
+  { "id": "ph-haru-1",  "therapistId": "haru",  "url": "/images/cast-haru.png",        "isMain": true,  "sortOrder": 1 },
+  { "id": "ph-haru-2",  "therapistId": "haru",  "url": "/images/placeholder.jpg",      "isMain": false, "sortOrder": 2 },
+  { "id": "ph-haru-3",  "therapistId": "haru",  "url": "/images/placeholder.jpg",      "isMain": false, "sortOrder": 3 },
+  { "id": "ph-shion-1", "therapistId": "shion", "url": "/images/placeholder.jpg",      "isMain": true,  "sortOrder": 1 },
+  { "id": "ph-shion-2", "therapistId": "shion", "url": "/images/placeholder.jpg",      "isMain": false, "sortOrder": 2 },
+  { "id": "ph-shion-3", "therapistId": "shion", "url": "/images/placeholder.jpg",      "isMain": false, "sortOrder": 3 }
+]

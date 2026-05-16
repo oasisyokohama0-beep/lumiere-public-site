@@ -3,6 +3,11 @@
 統合時にイグチが処理する項目を集約。
 **本番公開前に全項目を消化すること。**
 
+grep コマンドで全マーカー箇所を確認できる：
+```bash
+grep -rn "LEGAL(handover)" --include="*.tsx" --include="*.ts" .
+```
+
 ---
 
 ## 法務テキスト
@@ -15,24 +20,38 @@
 - [ ] `/system` — ご利用ルール・キャンセル規定
 - [ ] `/system` — 特定商取引法の表示要否の確認
 
-## 店舗基本情報
+## 店舗基本情報（store.json プレースホルダー → 実値）
 
-- [ ] `/access` — 営業エリア・アクセス情報
-- [ ] `/access` — 営業時間（`[STORE_BUSINESS_HOURS]`）
-- [ ] `/access` — 電話番号（`[STORE_PHONE]`）
-- [ ] `/access` — LINE URL/ID（`[STORE_LINE_URL]`）
-- [ ] `/access` — 定休日（`[STORE_CLOSED_DAYS]`）
-- [ ] `store.json` — 全プレースホルダーを実値に差し替え
-- [ ] `components/layout/SiteHeader.tsx` — LINE・TEL ボタンに実 URL 設定
-- [ ] `components/layout/FixedCta.tsx` — LINE・TEL の href に実 URL 設定
+- [ ] `store.json` — `[STORE_NAME]` 店舗名（日本語）
+- [ ] `store.json` — `[STORE_NAME_ROMAN]` 店舗名（英字）
+- [ ] `store.json` — `[STORE_CATCHPHRASE]` キャッチコピー
+- [ ] `store.json` — `[STORE_AREA]` 営業エリア
+- [ ] `store.json` — `[STORE_DESCRIPTION]` 店舗説明文
+- [ ] `store.json` — `[STORE_LINE_URL]` LINE 連絡先 URL
+- [ ] `store.json` — `[STORE_PHONE]` 電話番号（tel: リンク用）
+- [ ] `store.json` — `[STORE_BUSINESS_HOURS]` 営業時間
+- [ ] `store.json` — `[STORE_CLOSED_DAYS]` 定休日
+- [ ] `store.json` — `[STORE_ESTABLISHED]` 創業年
+
+## アクセスページ追記
+
+- [ ] `/access` — エリア詳細・最寄り駅（`[STORE_ACCESS_DETAIL]`）
+- [ ] `/access` — 代表者名・運営会社（任意）
+
+## メニューのデッドアンカー（href が仮のもの）
+
+- [ ] ハンバーガーメニュー「予約フォーム」`href="#reserve"` → 実URLに差し替え
+- [ ] ハンバーガーメニュー「セラピスト募集」`href="#recruit"` → 実URLに差し替え
+- [ ] ハンバーガーメニュー「お問い合わせ」`href="#contact"` → 実URLに差し替え
 
 ## 動作確認
 
 - [ ] 18禁モーダル「いいえ」→ Yahoo! Japan にリダイレクト
 - [ ] 18禁モーダル「はい」→ 30日間 localStorage フラグ保持
-- [ ] LINE ボタンが実際のアカウントにつながること
-- [ ] 電話番号が正しいこと
+- [ ] FixedCta LINE ボタンが実際のアカウントにつながること
+- [ ] FixedCta TEL ボタンが正しい番号に発信すること
+- [ ] 全主要ページ（/players /shifts /reviews /ranking /system /access /terms）にメニューから1〜2クリックで到達できること
 
 ---
 
-*`LEGAL(handover):` コメントが差し込み箇所のマーカー。コード内を検索して全て対応すること。*
+*`LEGAL(handover):` コメントが差し込み箇所のマーカー。コード内を grep して全て対応すること。*

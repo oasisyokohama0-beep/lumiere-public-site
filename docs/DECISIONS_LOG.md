@@ -68,5 +68,19 @@
 - `/diary` は低優先度のため現状維持（骨組み＋ダミーデータのまま）
 - `/reviews` は既実装済みのため変更なし
 
+## 2026-05-13｜仕様書 v2.2 への対応
+
+### 変更点
+- shifts.json を14日分（2026-05-12〜2026-05-25）に拡張
+- photos.json を新規作成（TherapistPhoto[]、セラピスト1名あたり3件）
+- lib/types/news.ts を新規作成・index.ts に追加
+- store.json に `closedDays` キーを追加（10キー完備）
+- /access ページのハードコード配列を store.json 経由に変更（v2.2接合部規約1.5準拠）
+- FixedCta・SiteHeader の LINE/TEL ボタンを store.json 経由に変更 + LEGAL マーカー追加
+- SiteHeader ナビゲーション修正：/players・/reviews・/access を追加、重複の /system 2リンクを解消、デッドアンカーに LEGAL マーカー付与
+
+### news.json（独自追加の経緯）
+v2.2 で任意機能として正式採用。v1〜v2 の段階で TOP ページの Information セクション用に先行実装したもので、仕様書には未記載だったが追加判断した。今回 v2.2 で公式化されたため DECISIONS_LOG に経緯を記録。
+
 ## イグチへの確認
-- 確認内容：なし（仕様書 v2.1 通りに対応）
+- 確認内容：なし（仕様書 v2.2 通りに対応）
