@@ -49,14 +49,16 @@ public-site/
 ## 各ページの状態
 | ページ | 状態 | 備考 |
 |---|---|---|
-| / | 完了 | TOP：スライダー・キャスト・お知らせ・口コミ・予約 |
+| / | 完了 | TOP：スライダー・キャスト・お知らせ・口コミ・予約。Events `view all →` が `/events` へリンク、Voice に `POST A REVIEW` CTA（v2.3） |
 | /players | 完了 | セラピスト一覧（エディトリアルリスト） |
 | /players/[id] | 完了 | 詳細：写真・自己紹介・シフト・口コミ・指名ボタン |
 | /shifts | 完了 | 日付タブ・本日出勤・週間一覧 |
-| /diary | 完了 | 写メ日記一覧 |
-| /diary/[id] | 完了 | 写メ日記詳細 |
+| /diary | 完了 | 写メ日記一覧（v2.3 で 2 列カードグリッド + サムネ画像に刷新） |
+| /diary/[id] | 完了 | 写メ日記詳細（v2.3 で画像ギャラリー・セラピスト紹介リンク・前後ナビ追加） |
+| /events | 完了 | イベント一覧（v2.3 新規）。`store_events` 全件、グラデカード表示 |
 | /ranking | 完了 | 月間TOP3 |
-| /reviews | 完了 | 全口コミ・平均評価 |
+| /reviews | 完了 | 全口コミ・平均評価。`POST A REVIEW` CTA を上部に追加（v2.3） |
+| /reviews/new | 完了 | 口コミ投稿フォーム（v2.3 新規）。honeypot + クライアント localStorage レート制限。Server Action は no-op スタブ |
 | /system | 完了 | 料金表・オプション |
 | /access | 完了 | 3エリア・営業時間・予約CTA |
 | /terms | 完了 | 利用規約・プライバシーポリシー |
@@ -84,10 +86,13 @@ npm run start  # 本番起動
 | `app/players/page.tsx` | therapists を Supabase クエリに置換 |
 | `app/players/[id]/page.tsx` | therapist / shifts / reviews を Supabase クエリに置換 |
 | `app/shifts/page.tsx` | shifts / therapists を Supabase クエリに置換。日付ハードコードを修正して dynamic rendering に |
-| `app/diary/page.tsx` | diary_posts を Supabase クエリに置換 |
-| `app/diary/[id]/page.tsx` | diary_posts を Supabase クエリに置換 |
+| `app/diary/page.tsx` | diary_posts + diary_images（先頭画像）を Supabase クエリに置換 |
+| `app/diary/[id]/page.tsx` | diary_posts + diary_images（sort_order ASC 全件）を Supabase クエリに置換 |
+| `app/events/page.tsx` | store_events を Supabase クエリに置換（`getStoreEvents`） |
 | `app/ranking/page.tsx` | ranking_monthly を Supabase クエリに置換 |
 | `app/reviews/page.tsx` | reviews を Supabase クエリに置換 |
+| `app/reviews/new/page.tsx` | therapists（`getPublicPlayers`）を Supabase クエリに置換 |
+| `app/reviews/new/actions.ts` | `submitReview` Server Action 内の no-op を Supabase INSERT に置換。サーバ側レート制限（KV/Upstash）も追加必須 |
 | `app/system/page.tsx` | courses を Supabase クエリに置換 |
 | `next.config.ts` | Supabase Storage の hostname を remotePatterns に追加 |
 | `components/layout/SiteHeader.tsx` | LINE / TEL ボタンに実際の URL を設定 |

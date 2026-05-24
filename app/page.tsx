@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { PageWrapper } from '@/components/layout/PageWrapper'
 import { BDivider } from '@/components/common/BDivider'
 import { EventSlider } from '@/components/common/EventSlider'
@@ -43,9 +44,15 @@ export default function TopPage() {
         <section className="mx-4 mt-5" aria-label="イベント・キャンペーン">
           <div className="flex items-baseline justify-between px-1 pb-3">
             <span className="font-serif text-[11px] tracking-[4px] uppercase text-gold italic">Events</span>
-            <span className="font-serif text-[10px] tracking-[2px] text-ink-sub italic">view all →</span>
+            <Link
+              href="/events"
+              className="font-serif text-[10px] tracking-[2px] text-ink-sub italic no-underline hover:text-gold"
+            >
+              view all →
+            </Link>
           </div>
-          <EventSlider events={events} />
+          {/* TOP は EventSlider 用に先頭3件のみ表示（一覧は /events） */}
+          <EventSlider events={events.slice(0, 3)} />
         </section>
 
         {/* ── 在籍セラピスト ── */}
@@ -105,6 +112,22 @@ export default function TopPage() {
                 <div className="font-serif text-[10px] tracking-[1.5px] italic text-ink-sub mt-3">— {r.authorName}</div>
               </div>
             ))}
+          </div>
+
+          {/* CTA: 口コミを投稿する */}
+          <div className="mt-5 flex flex-col items-center gap-2.5">
+            <Link
+              href="/reviews/new"
+              className="inline-block px-7 py-3 border border-gold text-gold font-serif tracking-[2.5px] text-[11px] italic no-underline"
+            >
+              POST A REVIEW
+            </Link>
+            <Link
+              href="/reviews"
+              className="font-serif text-[10px] tracking-[2px] text-ink-sub italic no-underline"
+            >
+              view all reviews →
+            </Link>
           </div>
         </section>
 

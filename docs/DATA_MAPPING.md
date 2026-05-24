@@ -68,23 +68,46 @@
 
 ---
 
-## app/diary/page.tsx（写メ日記一覧）
+## app/diary/page.tsx（写メ日記一覧）★ v2.3 で UI 刷新
 
 ### 使用データ
 - `lib/data/diary.json` → 全件、postedAt 降順
+- 各 post の `images[]` から sortOrder ASC の先頭1枚をサムネ表示
 
 ### イグチが置換する際の注意
+- 参照実装: `reservation-saas/lib/hp/queries.ts:getDiaryPosts`
 - `diary_posts WHERE is_published=true ORDER BY posted_at DESC`
+- + `diary_images WHERE diary_post_id IN (...) ORDER BY sort_order ASC` を LEFT JOIN
+  またはサブクエリで先頭1枚のみ取得
+- 2 列カードグリッド表示、サムネ画像必須（`/images/placeholder.jpg` フォールバックも可）
 
 ---
 
-## app/diary/[id]/page.tsx（写メ日記詳細）
+## app/diary/[id]/page.tsx（写メ日記詳細）★ v2.3 で UI 刷新
 
 ### 使用データ
 - `lib/data/diary.json` → id で1件
+- 当該 post の `images[]` 全件、sortOrder ASC でギャラリー表示
 
 ### イグチが置換する際の注意
+- 参照実装: `reservation-saas/lib/hp/queries.ts:getDiaryPosts`
 - `diary_posts WHERE id = params.id AND is_published=true`
+- + `diary_images WHERE diary_post_id = :id ORDER BY sort_order ASC`
+- セラピスト紹介ページへのリンクあり（`/players/[therapistId]`）— store_code 配下では URL 調整必要
+- 前後の投稿リンクは postedAt DESC 配列の前後を参照
+
+---
+
+## app/events/page.tsx（イベント一覧）★ v2.3 新規
+
+### 使用データ
+- `lib/data/events.json` → 全件、startDate 降順
+
+### イグチが置換する際の注意
+- 参照実装: `reservation-saas/lib/hp/queries.ts:getStoreEvents`
+- `store_events WHERE is_active=true ORDER BY start_date DESC, sort_order ASC`
+- 空配列フォールバックを保持すること（空状態 UI が用意済み）
+- TOP の `<Link href="/events">` は store_code 配下では `/{storeCode}/events` に書き換え
 
 ---
 
@@ -106,7 +129,33 @@
 - `lib/data/reviews.json` → 全件、postedAt 降順
 
 ### イグチが置換する際の注意
-- `reviews WHERE is_published=true ORDER BY posted_at DESC`
+- `reviews WHERE is_approved=true ORDER BY posted_at DESC`
+  （v2.3 で投稿フォームが `is_approved=false` で INSERT するようになったため、
+   一覧側のフィルタは `is_approved=true` を必須にすること。`is_published` 廃止）
+
+---
+
+## app/reviews/new/page.tsx（口コミ投稿フォーム）★ v2.3 新規
+
+### 使用データ
+- `lib/data/therapists.json` → 全件（player_id 選択 UI 用）
+
+### Server Action
+- `app/reviews/new/actions.ts` の `submitReview`
+- 現状は no-op スタブ（バリデーションのみ実施、永続化なし）
+- honeypot ヒット時はバリデーションをスキップして「成功扱い」で破棄
+- クライアント側 localStorage で同一ブラウザ 5 分間 1 件のレート制限を実装済み
+
+### イグチが置換する際の注意
+- 参照実装: `reservation-saas/lib/hp/queries.ts:createReview` および `getPublicPlayers`
+- INSERT 対象: `reviews(store_id, player_id, author_name, rating, content, is_approved, posted_at)`
+  - `store_id`: URL の store_code から解決
+  - `is_approved`: false（owner 承認待ち）
+  - `posted_at`: `now()`
+- **サーバ側レート制限を必ず追加**：同一 IP から 5 分間 1 件まで（Vercel KV / Upstash 推奨）
+  - クライアント側の localStorage は最低限の二重防御の片側のみ。サーバ側が本丸。
+- honeypot ヒット時は INSERT せず「成功扱い」を返す挙動を維持
+- player_id は任意（null 許容）
 
 ---
 

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { PageWrapper } from '@/components/layout/PageWrapper'
 import { BDivider } from '@/components/common/BDivider'
 import reviewsData from '@/lib/data/reviews.json'
@@ -45,6 +46,19 @@ export default function ReviewsPage() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* CTA: 口コミを投稿する */}
+        <div className="px-[22px] pt-2 pb-6 text-center">
+          <Link
+            href="/reviews/new"
+            className="inline-block px-8 py-3 bg-ink text-white font-serif tracking-[2.5px] text-[11px] no-underline"
+          >
+            POST A REVIEW
+          </Link>
+          <p className="mt-2.5 font-jp text-[11px] text-ink-sub leading-loose">
+            ご利用いただいたお客様の口コミをお寄せください
+          </p>
         </div>
 
         <div className="px-[22px] flex flex-col gap-3.5 pb-10">

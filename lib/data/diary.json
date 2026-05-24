@@ -4,44 +4,79 @@
     "therapistId": "ren",
     "therapistName": "蓮",
     "title": "はじめてのお客様へ",
-    "content": "今日は初めてご来店の方とお会いしました。最初はとても緊張されていたようでしたが、お話しするうちに少しずつほぐれていただけて、わたしも嬉しかったです。またお会いできるといいな。",
-    "postedAt": "2026-05-11T20:00:00Z",
-    "images": []
+    "content": "今日は初めてご来店の方とお会いしました。最初はとても緊張されていたようでしたが、お話しするうちに少しずつほぐれていただけて、わたしも嬉しかったです。\n\n「次はもう少しリラックスして来ます」とのお言葉、ありがとうございました。またお会いできる日を楽しみにしています。",
+    "postedAt": "2026-05-22T20:00:00Z",
+    "images": [
+      { "id": "img-001-1", "diaryPostId": "diary-001", "url": "/images/cast-ren.jpg", "sortOrder": 0 }
+    ]
   },
   {
     "id": "diary-002",
     "therapistId": "sora",
     "therapistName": "蒼",
     "title": "夜の時間",
-    "content": "静かな夜が好きです。窓の外に街の光が見えて、ふたりで無言でいる時間も悪くない。言葉より、空気でわかり合えることがある。",
-    "postedAt": "2026-05-10T23:00:00Z",
-    "images": []
+    "content": "静かな夜が好きです。窓の外に街の光が見えて、ふたりで無言でいる時間も悪くない。言葉より、空気でわかり合えることがある。\n\n金曜の夜、22時から空き枠があります。ご予約お待ちしています。",
+    "postedAt": "2026-05-21T23:00:00Z",
+    "images": [
+      { "id": "img-002-1", "diaryPostId": "diary-002", "url": "/images/cast-sora.png", "sortOrder": 0 }
+    ]
   },
   {
     "id": "diary-003",
     "therapistId": "haru",
     "therapistName": "春",
     "title": "デビューして1ヶ月",
-    "content": "デビューして気づけばもう1ヶ月。毎日ドキドキしながらも、お客様の笑顔を見るたびに、この仕事をして良かったなと思います。まだまだ勉強中ですが、一生懸命お相手します！",
-    "postedAt": "2026-05-09T19:00:00Z",
-    "images": []
+    "content": "デビューして気づけばもう1ヶ月。毎日ドキドキしながらも、お客様の笑顔を見るたびに、この仕事をして良かったなと思います。\n\nまだまだ勉強中ですが、一生懸命お相手します。今月は土日が比較的空いていますので、ぜひお気軽にご相談ください。",
+    "postedAt": "2026-05-20T19:00:00Z",
+    "images": [
+      { "id": "img-003-1", "diaryPostId": "diary-003", "url": "/images/cast-haru.png", "sortOrder": 0 },
+      { "id": "img-003-2", "diaryPostId": "diary-003", "url": "/images/cast-ren.jpg", "sortOrder": 1 }
+    ]
   },
   {
     "id": "diary-004",
-    "therapistId": "yuki",
-    "therapistName": "雪",
-    "title": "丁寧な時間",
-    "content": "急がない。せかさない。ただ、ゆっくりと。そんな時間を一緒に過ごしませんか。",
-    "postedAt": "2026-05-08T21:00:00Z",
-    "images": []
+    "therapistId": "ren",
+    "therapistName": "蓮",
+    "title": "新メニューのご案内",
+    "content": "今月から、120分のロングコースをご用意しました。\n\nお食事のあとに、ゆっくりと過ごしていただける時間です。香り・音楽・お飲み物までこだわってお迎えしますので、特別な日にいかがでしょうか。",
+    "postedAt": "2026-05-18T18:30:00Z",
+    "images": [
+      { "id": "img-004-1", "diaryPostId": "diary-004", "url": "/images/cast-ren.jpg", "sortOrder": 0 }
+    ]
   },
   {
     "id": "diary-005",
+    "therapistId": "sora",
+    "therapistName": "蒼",
+    "title": "雨の日に",
+    "content": "今日は朝から雨。お足元の悪いなか、来てくださったお客様、本当にありがとうございました。\n\n雨音を聞きながらの時間も、それはそれで好きです。次の出勤は水曜です。",
+    "postedAt": "2026-05-15T21:00:00Z",
+    "images": [
+      { "id": "img-005-1", "diaryPostId": "diary-005", "url": "/images/cast-sora.png", "sortOrder": 0 },
+      { "id": "img-005-2", "diaryPostId": "diary-005", "url": "/images/cast-ren.jpg", "sortOrder": 1 },
+      { "id": "img-005-3", "diaryPostId": "diary-005", "url": "/images/cast-haru.png", "sortOrder": 2 }
+    ]
+  },
+  {
+    "id": "diary-006",
+    "therapistId": "haru",
+    "therapistName": "春",
+    "title": "週末の出勤について",
+    "content": "今週末は土日とも、12時から22時まで出勤予定です。\n\n土曜の夕方以降と日曜の昼間は人気の時間帯ですので、ご希望の方はお早めにご連絡くださいませ。LINE からのご予約もお待ちしています。",
+    "postedAt": "2026-05-13T17:00:00Z",
+    "images": [
+      { "id": "img-006-1", "diaryPostId": "diary-006", "url": "/images/cast-haru.png", "sortOrder": 0 }
+    ]
+  },
+  {
+    "id": "diary-007",
     "therapistId": "ren",
     "therapistName": "蓮",
     "title": "5月のキャンペーンについて",
-    "content": "今月は初回割引キャンペーン中です。はじめての方も、ぜひこの機会にお気軽にご相談ください。LINEからのご連絡もお待ちしています。",
-    "postedAt": "2026-05-06T18:00:00Z",
-    "images": []
+    "content": "今月は初回割引キャンペーン中です。¥3,000 OFF でご利用いただけます。\n\nはじめての方は緊張されると思いますが、こちらでしっかりエスコートしますので、安心してお越しください。LINE からのご連絡もお待ちしています。",
+    "postedAt": "2026-05-11T18:00:00Z",
+    "images": [
+      { "id": "img-007-1", "diaryPostId": "diary-007", "url": "/images/cast-ren.jpg", "sortOrder": 0 }
+    ]
   }
 ]

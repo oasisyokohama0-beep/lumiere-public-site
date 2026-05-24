@@ -20,5 +20,35 @@
     "title": "6月の出勤スケジュール更新",
     "subtitle": "2026.06.01 〜",
     "startDate": "2026-06-01"
+  },
+  {
+    "id": "evt-004",
+    "tag": "ANNIVERSARY",
+    "title": "2周年記念 ご新規様 60min ¥5,000 OFF",
+    "subtitle": "2026.06.15 — 06.30",
+    "startDate": "2026-06-15",
+    "endDate": "2026-06-30"
+  },
+  {
+    "id": "evt-005",
+    "tag": "PREMIUM",
+    "title": "プレミアム指名コース 新設のお知らせ",
+    "subtitle": "2026.05.20 〜",
+    "startDate": "2026-05-20"
+  },
+  {
+    "id": "evt-006",
+    "tag": "SUMMER",
+    "title": "夏季営業時間延長キャンペーン",
+    "subtitle": "2026.07.01 — 08.31",
+    "startDate": "2026-07-01",
+    "endDate": "2026-08-31"
+  },
+  {
+    "id": "evt-007",
+    "tag": "RECRUIT",
+    "title": "セラピスト募集中 体験入店歓迎",
+    "subtitle": "通年",
+    "startDate": "2026-04-01"
   }
 ]
